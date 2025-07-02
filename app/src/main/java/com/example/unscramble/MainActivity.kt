@@ -8,10 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 
 import androidx.compose.material3.Surface
 
-import androidx.compose.ui.Modifier
 
-import com.example.unscramble.ui.GameScreen
-import com.example.unscramble.ui.WordleScreen
+import androidx.compose.ui.Modifier
+import com.example.unscramble.ui.navigation.AppNavigation
+
+
+
 
 import com.example.unscramble.ui.theme.UnscrambleTheme
 
@@ -21,12 +23,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             UnscrambleTheme{
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                ) {
-                    WordleScreen()
+
+                  AppNavigation()
                 }
             }
         }
     }
-}
+
+
+
+
+
